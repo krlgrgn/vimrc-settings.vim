@@ -4,4 +4,6 @@ else
   let g:loaded_vimrc_settings = 'yes'
 endif
 
-source '../text-editing-config.vim'
+let path = expand('%:p:h')
+
+exec 'source' path . '../text-editing-config.vim'
