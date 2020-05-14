@@ -42,3 +42,4 @@ let g:which_key_map['g'] = {
       \ 's' : [':Magit'     , 'status (:Magit/)'],
       \ 'b' : [':Gblame'     , 'blame (:Gblame)'],
       \ 'B' : [':Gbrowse'     , 'blame (:Gbrowse)'],
+      \ }
