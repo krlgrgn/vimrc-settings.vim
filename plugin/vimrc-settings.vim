@@ -4,4 +4,6 @@ else
   let g:loaded_vimrc_settings = 'yes'
 endif
 
-so '~/.vim/plugged/vimrc-settings.vim/text-editing-config.vim'
+let home = expand('~/.vim/plugged/vimrc-settings.vim/')
+
+exec 'source' home . 'text-editing-config.vim'
