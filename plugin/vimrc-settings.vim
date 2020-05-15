@@ -15,6 +15,11 @@ exec 'source' home . 'ale.vim'
 exec 'source' home . 'which-key.vim'
 exec 'source' home . 'nerdtree.vim'
 
+" Auto read changed file
+set autoread
+
+set backspace=indent,eol,start
+
 set wildmenu
 
 " Searching
@@ -32,14 +37,10 @@ set modeline            " Enable modeline.
 set splitbelow  " Horizontal split below current.
 set splitright  " Vertical split to right of current.
 
-" ----------------------------------------
-" Syntax highlighting & Autocompletion
-" ----------------------------------------
-
 set encoding=utf8
 
 set background=dark
-" colorscheme vividchalk
+
 colorscheme onedark
 
 " Changes file format to unix automatically.
@@ -47,7 +48,6 @@ set ff=unix
 
 filetype indent on
 filetype plugin on
-
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
@@ -69,7 +69,6 @@ map <Leader>ra :RuboCop -a<CR>
 " text search
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
-
 
 " rubocop
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
