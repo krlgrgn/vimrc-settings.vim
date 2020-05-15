@@ -12,3 +12,5 @@ let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_sign_column_always = 1
 " stops underlining the part where the error is. it breaks syntax highlighting.
 let g:ale_set_highlights = 0
+
+let g:ale_fixers = {'ruby': ['rubocop']}
