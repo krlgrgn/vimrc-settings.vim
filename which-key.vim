@@ -39,7 +39,13 @@ let g:which_key_map['f'] = {
 
 let g:which_key_map['g'] = {
       \ 'name' : '+git' ,
-      \ 's' : [':Magit'     , 'status (:Magit/)'],
+      \ 's' : [':Gstatus'     , 'status (:Gstatus)'],
       \ 'b' : [':Gblame'     , 'blame (:Gblame)'],
       \ 'B' : [':Gbrowse'     , 'browse (:Gbrowse)'],
+      \ 'l' : [':Commits'      , 'commits (:Commits)'],
+      \ 'L' : [':BCommits'     , 'buffer commits (:BCommits)'],
+      \ 'p': '+push',
+            \ 'p' : [':Gpush', 'push (:Gpush)']      ,
+            \ 't' : [':Gpush -f' , 'push --force (:Gpush -f)'] ,
+            \ },
       \ }
