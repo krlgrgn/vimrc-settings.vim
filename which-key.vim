@@ -44,8 +44,9 @@ let g:which_key_map['g'] = {
       \ 'B' : [':Gbrowse'     , 'browse (:Gbrowse)'],
       \ 'l' : [':Commits'      , 'commits (:Commits)'],
       \ 'L' : [':BCommits'     , 'buffer commits (:BCommits)'],
-      \ 'p': '+push',
+      \ 'p': {
+            \ 'name' : '+push',
             \ 'p' : [':Gpush', 'push (:Gpush)']      ,
-            \ 't' : [':Gpush -f' , 'push --force (:Gpush -f)'] ,
+            \ 'f' : [':Gpush -f' , 'push --force (:Gpush -f)'],
             \ },
       \ }
