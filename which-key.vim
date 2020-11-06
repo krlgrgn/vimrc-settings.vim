@@ -50,7 +50,7 @@ let g:which_key_map['g'] = {
             \ 'f' : [':Gpush -f' , 'push --force (:Gpush -f)'],
             \ },
       \ }
-      
+
 let g:which_key_map['w'] = {
       \ 'name' : '+windows' ,
       \ 'w' : ['<C-W>w'     , 'other-window']          ,
@@ -67,4 +67,14 @@ let g:which_key_map['w'] = {
       \ 'K' : [':resize -5'  , 'expand-window-up']      ,
       \ '=' : ['<C-W>='     , 'balance-window']        ,
       \ '?' : ['Windows'    , 'fzf-window']            ,
+      \ }
+
+let g:which_key_map['`'] = [':e ~/.vimrc', 'edit-config']
+
+let g:which_key_map['l'] = {
+      \ 'name' : '+linting' ,
+      \ 'r': {
+            \ 'name' : '+rubocop',
+            \ 'a' : [':RuboCop -a', 'rubocop-autofix (:RuboCop -a)']      ,
+            \ },
       \ }

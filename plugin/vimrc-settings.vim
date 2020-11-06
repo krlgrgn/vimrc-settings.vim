@@ -62,13 +62,10 @@ endif
 
 
 " Key mappings
-map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 map <C-o> :NERDTreeToggle<CR>
-map <Leader>ra :RuboCop -a<CR>
 
 " text search
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
 
 " rubocop
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
