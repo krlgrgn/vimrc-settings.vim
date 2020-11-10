@@ -71,6 +71,15 @@ let g:which_key_map['w'] = {
 
 let g:which_key_map['`'] = [':e ~/.vimrc', 'edit-config']
 
+let g:which_key_map['b'] = {
+      \ 'name' : '+buffers' ,
+      \ '-' : ['<C-6>'     , 'buffer-switch-back (<C-6>)']    ,
+      \ 'd' : [':bd'     , 'buffer-delete (:bd)']         ,
+      \ 'l' : [':ls'     , 'buffer-list (:ls)']         ,
+      \ 'n' : [':bn'     , 'buffer-next (:bn)']          ,
+      \ 'p' : [':bp'     , 'buffer-previous (:bp)']    ,
+      \ }
+
 let g:which_key_map['l'] = {
       \ 'name' : '+linting' ,
       \ 'r': {
