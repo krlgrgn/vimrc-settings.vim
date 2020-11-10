@@ -48,12 +48,3 @@ autocm BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
 " High light lines > 80 chars long.
 set colorcolumn=81
-
-" Add closing character and move cursor in between
-inoremap <> <><Left>
-inoremap () ()<Left>
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap `` ``<Left>
