@@ -72,12 +72,23 @@ let g:which_key_map['w'] = {
 let g:which_key_map['`'] = [':e ~/.vimrc', 'edit-config']
 
 let g:which_key_map['b'] = {
-      \ 'name' : '+buffers' ,
+      \ 'name' : '+buffer' ,
       \ '-' : ['<C-6>'     , 'buffer-switch-back (<C-6>)']    ,
-      \ 'd' : [':bd'     , 'buffer-delete (:bd)']         ,
+      \ 'd': {
+            \ 'name' : '+buffer-delete',
+            \ 'd' : [':bd'     , 'buffer-delete (:bd)']         ,
+            \ 'f' : [':call delete(@%)'     , 'buffer-delete-file-under-buffer (:call delete(@%))']         ,
+            \ 'p' : [':call delete(expand('%')) | bdelete!'     , 'buffer-purge-includes-file (:call delete(expand('%')) | bdelete!)']         ,
+            \ },
       \ 'l' : [':ls'     , 'buffer-list (:ls)']         ,
       \ 'n' : [':bn'     , 'buffer-next (:bn)']          ,
       \ 'p' : [':bp'     , 'buffer-previous (:bp)']    ,
+      \ 's' : [':w'     , 'buffer-save (:w)']    ,
+      \ 'y': {
+            \ 'name' : '+buffer-file-path-copy',
+            \ 'r' : [":call CopyToClipboard('%')"     , "copy-relative-file-path-clipboard (:let @+=expand('%'))"]         ,
+            \ 'f' : [":call CopyToClipboard('%:p')"    , "copy-full-file-path-clipboard (:let @+=expand('%:p'))"]         ,
+            \ },
       \ }
 
 let g:which_key_map['l'] = {
@@ -87,3 +98,11 @@ let g:which_key_map['l'] = {
             \ 'a' : [':RuboCop -a', 'rubocop-autofix (:RuboCop -a)']      ,
             \ },
       \ }
+
+
+let g:which_key_map['e'] = [ ':call o_file()',  'open file' ]
+
+" Functions
+function CopyToClipboard(opt)
+    let @+ = expand(a:opt)
+endfunction
