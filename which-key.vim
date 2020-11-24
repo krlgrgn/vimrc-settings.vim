@@ -10,7 +10,7 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 let g:which_key_map =  {}
 
 let g:which_key_map['f'] = {
-      \ 'name' : '+find' ,
+      \ 'name' : '+search' ,
       \ '/' : [':History/'     , 'history (:History/)'],
       \ ';' : [':Commands'     , 'commands (:Commands)'],
       \ 'a' : [':Ag'           , 'text Ag (:Ag)'],
@@ -99,8 +99,10 @@ let g:which_key_map['l'] = {
             \ },
       \ }
 
-
-let g:which_key_map['e'] = [ ':call o_file()',  'open file' ]
+let g:which_key_map['F'] = {
+      \ 'name' : '+file' ,
+      \ 's' : [':w'     , 'file-save (:w)']         ,
+      \ }
 
 " Functions
 function CopyToClipboard(opt)
